@@ -1,0 +1,190 @@
+<section id="type-detail-section">
+    <!-- 뒤로가기 -->
+    <button class="btn btn-white back-btn" onclick="history.back()">← 목록으로</button>
+
+    <!-- 타입 상세 정보 -->
+    <div class="type-detail-container">
+        <!-- 왼쪽: 샘플 갤러리 -->
+        <div class="type-detail-left">
+            <div class="sample-gallery">
+                <div class="sample-main">
+                    <img src="https://via.placeholder.com/600x400/E0E0E0/999999?text=Main+Sample" alt="메인 샘플" id="mainSample">
+                </div>
+                <div class="sample-thumbnails">
+                    <img src="https://via.placeholder.com/100x100/E0E0E0/999999?text=1" alt="샘플1" class="sample-thumb active">
+                    <img src="https://via.placeholder.com/100x100/E0E0E0/999999?text=2" alt="샘플2" class="sample-thumb">
+                    <img src="https://via.placeholder.com/100x100/E0E0E0/999999?text=3" alt="샘플3" class="sample-thumb">
+                    <img src="https://via.placeholder.com/100x100/E0E0E0/999999?text=4" alt="샘플4" class="sample-thumb">
+                </div>
+            </div>
+        </div>
+
+        <!-- 오른쪽: 타입 정보 -->
+        <div class="type-detail-right">
+            <!-- 작가 정보 -->
+            <div class="type-author-info">
+                <img src="https://via.placeholder.com/50/E0E0E0/999999?text=A" alt="작가" class="author-avatar-small">
+                <div>
+                    <h4>달빛작가</h4>
+                    <p class="author-stats">교환 23회 · 4.9점</p>
+                </div>
+                <button class="btn btn-white btn-sm">프로필 보기</button>
+            </div>
+
+            <!-- 타입 기본 정보 -->
+            <div class="type-detail-info">
+                <div class="type-badges">
+                    <span class="badge-premium">프리미엄</span>
+                    <span class="badge-status available">교환 가능</span>
+                </div>
+                <h1>판타지 캐릭터 일러스트</h1>
+                <p class="type-category">그림 · 판타지</p>
+                
+                <!-- 가격 -->
+                <div class="type-price-box">
+                    <div class="price-main">₩45,000</div>
+                    <p class="price-note">희망 교환 가치</p>
+                </div>
+
+                <!-- 교환 옵션 -->
+                <div class="exchange-options">
+                    <div class="option-item">
+                        <span class="option-label">다수 교환</span>
+                        <span class="option-value">가능 (최대 3건)</span>
+                    </div>
+                    <div class="option-item">
+                        <span class="option-label">차액 결제</span>
+                        <span class="option-value">불가</span>
+                    </div>
+                    <div class="option-item">
+                        <span class="option-label">작업 기간</span>
+                        <span class="option-value">2주 내외</span>
+                    </div>
+                </div>
+
+                <!-- 설명 -->
+                <div class="type-description-full">
+                    <h3>타입 소개</h3>
+                    <p>따뜻한 색감의 캐릭터 일러스트를 그립니다. 판타지 세계관을 선호하며, 디테일한 의상과 소품 표현이 가능합니다.</p>
+                    <p>배경 작업은 간단한 배경만 가능하며, 복잡한 배경은 추가 협의가 필요합니다.</p>
+                </div>
+
+                <!-- 태그 -->
+                <div class="type-tags-detail">
+                    <span class="tag">판타지</span>
+                    <span class="tag">수채화풍</span>
+                    <span class="tag">캐릭터</span>
+                    <span class="tag">의상디테일</span>
+                </div>
+
+                <!-- 액션 버튼 -->
+                <div class="type-actions">
+                    <button class="btn btn-primary btn-large">연성 신청하기</button>
+                    <button class="btn btn-white btn-large">북마크</button>
+                    <button class="btn btn-white btn-large">메시지 보내기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 하단: 추가 정보 -->
+    <div class="type-detail-bottom">
+        <!-- 탭 -->
+        <div class="detail-tabs">
+            <button class="detail-tab active" data-tab="portfolio">포트폴리오 (12)</button>
+            <button class="detail-tab" data-tab="reviews">후기 (8)</button>
+            <button class="detail-tab" data-tab="qna">문의사항 (3)</button>
+        </div>
+
+        <!-- 포트폴리오 탭 -->
+        <div class="detail-tab-content active" id="portfolio-content">
+            <div class="portfolio-grid">
+                <img src="https://via.placeholder.com/250x250/E0E0E0/999999?text=Work+1" alt="작업물1">
+                <img src="https://via.placeholder.com/250x250/E0E0E0/999999?text=Work+2" alt="작업물2">
+                <img src="https://via.placeholder.com/250x250/E0E0E0/999999?text=Work+3" alt="작업물3">
+                <img src="https://via.placeholder.com/250x250/E0E0E0/999999?text=Work+4" alt="작업물4">
+                <img src="https://via.placeholder.com/250x250/E0E0E0/999999?text=Work+5" alt="작업물5">
+                <img src="https://via.placeholder.com/250x250/E0E0E0/999999?text=Work+6" alt="작업물6">
+            </div>
+        </div>
+
+        <!-- 후기 탭 -->
+        <div class="detail-tab-content" id="reviews-content">
+            <div class="reviews-list">
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="https://via.placeholder.com/40/E0E0E0/999999?text=U1" alt="유저" class="review-avatar">
+                        <div>
+                            <h4>별빛소설가</h4>
+                            <div class="review-rating">5.0점</div>
+                        </div>
+                        <span class="review-date">2주 전</span>
+                    </div>
+                    <p class="review-text">기대 이상이었어요! 디테일 꼼꼼하고 소통 원활해서 좋았습니다</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="https://via.placeholder.com/40/E0E0E0/999999?text=U2" alt="유저" class="review-avatar">
+                        <div>
+                            <h4>구름만화가</h4>
+                            <div class="review-rating">5.0점</div>
+                        </div>
+                        <span class="review-date">3주 전</span>
+                    </div>
+                    <p class="review-text">색감이 정말 아름답고 마감 기한도 정확하게 지켜주셨어요</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 문의사항 탭 -->
+        <div class="detail-tab-content" id="qna-content">
+            <div class="qna-list">
+                <div class="qna-item">
+                    <div class="question">
+                        <span class="q-badge">Q</span>
+                        <p>배경 없이 캐릭터만 그려주시는 것도 가능한가요?</p>
+                    </div>
+                    <div class="answer">
+                        <span class="a-badge">A</span>
+                        <p>네, 가능합니다! 단색 배경이나 투명 배경으로 작업해드릴 수 있어요.</p>
+                    </div>
+                </div>
+
+                <div class="qna-item">
+                    <div class="question">
+                        <span class="q-badge">Q</span>
+                        <p>2차 창작도 가능한가요?</p>
+                    </div>
+                    <div class="answer">
+                        <span class="a-badge">A</span>
+                        <p>네, 2차 창작 가능합니다. 다만 상업적 이용은 불가능합니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+// 샘플 썸네일 클릭
+document.querySelectorAll('.sample-thumb').forEach(thumb => {
+    thumb.addEventListener('click', function() {
+        document.querySelectorAll('.sample-thumb').forEach(t => t.classList.remove('active'));
+        this.classList.add('active');
+        document.getElementById('mainSample').src = this.src.replace('100x100', '600x400');
+    });
+});
+
+// 탭 전환
+document.querySelectorAll('.detail-tab').forEach(tab => {
+    tab.addEventListener('click', function() {
+        document.querySelectorAll('.detail-tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.detail-tab-content').forEach(c => c.classList.remove('active'));
+        
+        this.classList.add('active');
+        const tabName = this.dataset.tab;
+        document.getElementById(tabName + '-content').classList.add('active');
+    });
+});
+</script>
