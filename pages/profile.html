@@ -221,7 +221,7 @@
                 <div class="add-icon">+</div>
                 <h3>새 타입 추가</h3>
                 <p>새로운 연성 타입을 등록하고<br>더 많은 작가님들과 교환하세요</p>
-                <button class="btn btn-primary">타입 등록하기</button>
+                <button class="btn btn-primary" id="openAddTypeModal">타입 등록하기</button>
             </div>
         </div>
     </div>
@@ -303,7 +303,89 @@
                 <div class="add-icon">+</div>
                 <h3>새 캐릭터 추가</h3>
                 <p>연성에 사용할<br>캐릭터를 등록하세요</p>
-                <button class="btn btn-primary">캐릭터 등록</button>
+                <button class="btn btn-primary" id="openAddCharacterModal">캐릭터 등록</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 타입 추가 모달 -->
+    <div class="modal-overlay" id="addTypeModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>새 타입 추가</h2>
+                <button class="modal-close" onclick="closeModal('addTypeModal')">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>타입 이름</label>
+                    <input type="text" class="form-input" placeholder="예: 판타지 캐릭터 일러스트">
+                </div>
+                <div class="form-group">
+                    <label>형식</label>
+                    <select class="form-select">
+                        <option>글</option>
+                        <option>그림</option>
+                        <option>디자인</option>
+                        <option>타로</option>
+                        <option>작곡</option>
+                        <option>굿즈</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>희망 교환 가치</label>
+                    <input type="text" class="form-input" placeholder="₩30,000">
+                </div>
+                <div class="form-group">
+                    <label>설명</label>
+                    <textarea class="form-textarea" placeholder="타입에 대한 자세한 설명을 입력하세요"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>태그 (쉼표로 구분)</label>
+                    <input type="text" class="form-input" placeholder="판타지, 수채화풍, 캐릭터">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-white" onclick="closeModal('addTypeModal')">취소</button>
+                <button class="btn btn-primary">등록하기</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 캐릭터 추가 모달 -->
+    <div class="modal-overlay" id="addCharacterModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>새 캐릭터 추가</h2>
+                <button class="modal-close" onclick="closeModal('addCharacterModal')">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>캐릭터 이름</label>
+                    <input type="text" class="form-input" placeholder="예: 세라핀">
+                </div>
+                <div class="form-group">
+                    <label>유형</label>
+                    <select class="form-select">
+                        <option>오리지널 캐릭터</option>
+                        <option>2차 창작</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>원작 (2차 창작인 경우)</label>
+                    <input type="text" class="form-input" placeholder="예: 해리포터">
+                </div>
+                <div class="form-group">
+                    <label>설명</label>
+                    <textarea class="form-textarea" placeholder="캐릭터에 대한 설명을 입력하세요"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>태그 (쉼표로 구분)</label>
+                    <input type="text" class="form-input" placeholder="판타지, 마법사">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-white" onclick="closeModal('addCharacterModal')">취소</button>
+                <button class="btn btn-primary">등록하기</button>
             </div>
         </div>
     </div>

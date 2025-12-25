@@ -38,10 +38,9 @@ function initPageEvents() {
     document.querySelectorAll('.btn-bookmark, .btn-bookmark-browse, .btn-bookmark-compact').forEach(btn => {
         btn.addEventListener('click', function(e) {
             e.stopPropagation();
-            if (this.textContent.includes('🤍')) {
-                this.textContent = this.textContent.replace('🤍', '❤️');
-            } else {
-                this.textContent = this.textContent.replace('❤️', '🤍');
+            const icon = this.querySelector('.icon-heart');
+            if (icon) {
+                icon.classList.toggle('active');
             }
         });
     });
@@ -161,6 +160,36 @@ function initPageEvents() {
             if (content) content.classList.add('active');
         });
     });
+
+    // 타입 추가 모달 열기
+    const openTypeModal = document.getElementById('openAddTypeModal');
+    if (openTypeModal) {
+        openTypeModal.addEventListener('click', function() {
+            document.getElementById('addTypeModal').classList.add('active');
+        });
+    }
+
+    // 캐릭터 추가 모달 열기
+    const openCharModal = document.getElementById('openAddCharacterModal');
+    if (openCharModal) {
+        openCharModal.addEventListener('click', function() {
+            document.getElementById('addCharacterModal').classList.add('active');
+        });
+    }
+
+    // 타입 카드 클릭 → 상세 페이지
+    document.querySelectorAll('.type-card-browse').forEach(card => {
+        card.addEventListener('click', function(e) {
+            // 북마크 버튼 클릭은 제외
+            if (e.target.closest('.btn-bookmark-browse')) return;
+            loadPage('type-detail');
+        });
+    });
+}
+
+// 모달 닫기 (전역 함수)
+function closeModal(modalId) {
+    document.getElementById(modalId).classList.remove('active');
 }
 
 // 네비게이션 클릭 이벤트
