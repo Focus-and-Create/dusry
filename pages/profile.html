@@ -1,103 +1,76 @@
 <section id="profile-section">
-    <!-- 프로필 헤더 -->
-    <div class="profile-header">
-        <div class="profile-avatar-section">
-            <img src="https://via.placeholder.com/100/E0E0E0/999999?text=Profile" alt="프로필" class="profile-avatar-large">
-            <button class="btn btn-white btn-sm">사진 변경</button>
-        </div>
-        <div class="profile-info-section">
-            <h1>어진님</h1>
-            <p class="profile-bio">치비 스타일 전문 디지털 아티스트</p>
-            <div class="profile-stats">
-                <div class="stat">
-                    <span class="stat-value">23</span>
-                    <span class="stat-label">교환 완료</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-value">4.9</span>
-                    <span class="stat-label">평균 별점</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-value">87</span>
-                    <span class="stat-label">받은 북마크</span>
-                </div>
+    <!-- 프로필 + 교환 희망 조건 (컴팩트) -->
+    <div class="profile-top-section">
+        <!-- 프로필 카드 -->
+        <div class="profile-card">
+            <div class="profile-avatar-section">
+                <img src="https://via.placeholder.com/80/E0E0E0/999999?text=Profile" alt="프로필" class="profile-avatar-medium">
+                <button class="btn btn-white btn-sm">사진 변경</button>
             </div>
-            <div class="profile-actions">
-                <button class="btn btn-primary">프로필 수정</button>
-                <button class="btn btn-white">설정</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- 교환 희망 조건 -->
-    <div class="exchange-preferences">
-        <h3>내 교환 희망 조건</h3>
-        <p class="section-desc">이 조건에 맞는 타입을 필터에서 쉽게 찾을 수 있어요</p>
-        
-        <div class="preference-grid">
-            <!-- 희망 가격대 -->
-            <div class="preference-item">
-                <label>희망 교환 가격대</label>
-                <div class="price-range-selector">
-                    <label class="checkbox-option">
-                        <input type="checkbox" checked>
-                        <span>~1만원</span>
-                    </label>
-                    <label class="checkbox-option">
-                        <input type="checkbox" checked>
-                        <span>1만~3만</span>
-                    </label>
-                    <label class="checkbox-option">
-                        <input type="checkbox" checked>
-                        <span>3만~5만</span>
-                    </label>
-                    <label class="checkbox-option">
-                        <input type="checkbox">
-                        <span>5만원~</span>
-                    </label>
+            <div class="profile-info-compact">
+                <h1>어진님</h1>
+                <p class="profile-bio">치비 스타일 전문 디지털 아티스트</p>
+                <div class="profile-stats-compact">
+                    <div class="stat-compact">
+                        <span class="stat-value">23</span>
+                        <span class="stat-label">교환 완료</span>
+                    </div>
+                    <div class="stat-compact">
+                        <span class="stat-value">4.9</span>
+                        <span class="stat-label">평균 별점</span>
+                    </div>
+                    <div class="stat-compact">
+                        <span class="stat-value">87</span>
+                        <span class="stat-label">받은 북마크</span>
+                    </div>
                 </div>
-            </div>
-
-            <!-- 다수 교환 -->
-            <div class="preference-item">
-                <label>다수 교환</label>
-                <div class="radio-group">
-                    <label class="radio-option">
-                        <input type="radio" name="multi-exchange" checked>
-                        <span>상관없음</span>
-                    </label>
-                    <label class="radio-option">
-                        <input type="radio" name="multi-exchange">
-                        <span>1:1만</span>
-                    </label>
-                    <label class="radio-option">
-                        <input type="radio" name="multi-exchange">
-                        <span>1:N 가능</span>
-                    </label>
-                </div>
-            </div>
-
-            <!-- 차액 결제 -->
-            <div class="preference-item">
-                <label>차액 결제</label>
-                <div class="radio-group">
-                    <label class="radio-option">
-                        <input type="radio" name="payment" checked>
-                        <span>상관없음</span>
-                    </label>
-                    <label class="radio-option">
-                        <input type="radio" name="payment">
-                        <span>차액 없음만</span>
-                    </label>
-                    <label class="radio-option">
-                        <input type="radio" name="payment">
-                        <span>차액 OK</span>
-                    </label>
+                <div class="profile-actions">
+                    <button class="btn btn-primary">프로필 수정</button>
+                    <button class="btn btn-white">설정</button>
                 </div>
             </div>
         </div>
 
-        <button class="btn btn-primary">저장하기</button>
+        <!-- 교환 희망 조건 카드 -->
+        <div class="preferences-card">
+            <h3>내 교환 희망 조건</h3>
+            <p class="section-desc">이 조건에 맞는 타입을 필터에서 쉽게 찾을 수 있어요</p>
+            
+            <div class="preference-compact-grid">
+                <!-- 희망 가격대 -->
+                <div class="preference-item-compact">
+                    <label>희망 가격대</label>
+                    <div class="preference-tags">
+                        <span class="pref-tag active">~1만원</span>
+                        <span class="pref-tag active">1만~3만</span>
+                        <span class="pref-tag active">3만~5만</span>
+                        <span class="pref-tag">5만원~</span>
+                    </div>
+                </div>
+
+                <!-- 다수 교환 -->
+                <div class="preference-item-compact">
+                    <label>다수 교환</label>
+                    <div class="preference-tags">
+                        <span class="pref-tag active">상관없음</span>
+                        <span class="pref-tag">1:1만</span>
+                        <span class="pref-tag">1:N 가능</span>
+                    </div>
+                </div>
+
+                <!-- 차액 결제 -->
+                <div class="preference-item-compact">
+                    <label>차액 결제</label>
+                    <div class="preference-tags">
+                        <span class="pref-tag active">상관없음</span>
+                        <span class="pref-tag">차액 없음만</span>
+                        <span class="pref-tag">차액 OK</span>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn btn-primary btn-sm">저장하기</button>
+        </div>
     </div>
 
     <!-- 내 타입 섹션 -->
@@ -331,9 +304,28 @@
                         <option>굿즈</option>
                     </select>
                 </div>
+                
+                <!-- 샘플 업로드 -->
+                <div class="form-group">
+                    <label>샘플 파일 (최대 3개)</label>
+                    <div class="sample-upload-area">
+                        <input type="file" id="sampleFiles" accept="image/*,audio/*,video/*,.gif" multiple class="file-input">
+                        <label for="sampleFiles" class="file-upload-label">
+                            <svg class="upload-icon" viewBox="0 0 24 24" width="32" height="32">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="17 8 12 3 7 8"></polyline>
+                                <line x1="12" y1="3" x2="12" y2="15"></line>
+                            </svg>
+                            <p class="upload-text">클릭하여 파일 선택</p>
+                            <p class="upload-hint">이미지, 음향, 동영상 파일 (최대 3개)</p>
+                        </label>
+                        <div id="samplePreview" class="sample-preview"></div>
+                    </div>
+                </div>
+                
                 <div class="form-group">
                     <label>희망 교환 가치</label>
-                    <input type="text" class="form-input" placeholder="₩30,000">
+                    <input type="text" class="form-input" placeholder="₩30,000~">
                 </div>
                 <div class="form-group">
                     <label>설명</label>

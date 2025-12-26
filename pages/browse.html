@@ -105,6 +105,7 @@
             <input type="text" class="search-input" placeholder="타입명, 작가명으로 검색...">
             <select class="sort-select">
                 <option>최신순</option>
+                <option>끌올순</option>
                 <option>인기순</option>
                 <option>가격 낮은순</option>
                 <option>가격 높은순</option>
@@ -116,7 +117,6 @@
     <div class="type-grid-browse">
         <!-- 글 타입 1 -->
         <div class="type-card-browse" data-format="writing">
-            <button class="btn-bookmark-browse">🤍</button>
             <div class="type-samples-browse">
                 <div class="text-sample-browse">
                     <p>"그의 눈빛이 내게로 향했을 때, 세상이 멈춘 것만 같았다..."</p>
@@ -124,20 +124,21 @@
             </div>
             <div class="type-info-browse">
                 <h3>감성 로맨스 소설</h3>
-                <div class="type-price-simple">₩25,000 </div>
+                <div class="type-meta-row">
+                    <div class="type-price-simple">₩25,000~</div>
                     <span class="tag">로맨스</span>
-                    <span class="tag">단편</span>
-            </div>
-            <div class="type-footer">
-                <span class="type-status available">교환 가능</span>
-                <span class="type-author">별빛소설가</span>
+                    <button class="btn-bookmark-browse">
+                        <svg class="icon-heart" viewBox="0 0 24 24">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                        </svg>
+                    </button>
+                </div>
             </div>
         </div>
 
         <!-- 그림 타입 1 - 프리미엄 -->
         <div class="type-card-browse premium" data-format="art">
             <div class="premium-badge-small">★</div>
-            <button class="btn-bookmark-browse">🤍</button>
             <div class="type-samples-browse">
                 <img src="https://via.placeholder.com/150/E0E0E0/999999?text=1" alt="샘플1">
                 <img src="https://via.placeholder.com/150/E0E0E0/999999?text=2" alt="샘플2">
@@ -145,21 +146,20 @@
             </div>
             <div class="type-info-browse">
                 <h3>판타지 캐릭터 일러스트</h3>
-                <div class="type-price-simple">₩45,000</div>
-                <div class="type-tags">
+                <div class="type-meta-row">
+                    <div class="type-price-simple">₩45,000~</div>
                     <span class="tag">판타지</span>
-                    <span class="tag">수채화풍</span>
+                    <button class="btn-bookmark-browse">
+                        <svg class="icon-heart" viewBox="0 0 24 24">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                        </svg>
+                    </button>
                 </div>
-            </div>
-            <div class="type-footer">
-                <span class="type-status available">교환 가능</span>
-                <span class="type-author">달빛작가</span>
             </div>
         </div>
 
         <!-- 디자인 타입 -->
         <div class="type-card-browse" data-format="design">
-            <button class="btn-bookmark-browse">🤍</button>
             <div class="type-samples-browse">
                 <img src="https://via.placeholder.com/150/E0E0E0/999999?text=A" alt="샘플1">
                 <img src="https://via.placeholder.com/150/E0E0E0/999999?text=B" alt="샘플2">
@@ -167,21 +167,20 @@
             </div>
             <div class="type-info-browse">
                 <h3>미니멀 로고 디자인</h3>
-                <div class="type-price-simple">₩35,000</div>
-                <div class="type-tags">
+                <div class="type-meta-row">
+                    <div class="type-price-simple">₩35,000~</div>
                     <span class="tag">로고</span>
-                    <span class="tag">미니멀</span>
+                    <button class="btn-bookmark-browse">
+                        <svg class="icon-heart" viewBox="0 0 24 24">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                        </svg>
+                    </button>
                 </div>
-            </div>
-            <div class="type-footer">
-                <span class="type-status available">교환 가능</span>
-                <span class="type-author">디자인스튜디오</span>
             </div>
         </div>
 
         <!-- 타로 타입 -->
         <div class="type-card-browse" data-format="tarot">
-            <button class="btn-bookmark-browse">🤍</button>
             <div class="type-samples-browse">
                 <img src="https://via.placeholder.com/150/E0E0E0/999999?text=X" alt="샘플1">
                 <img src="https://via.placeholder.com/150/E0E0E0/999999?text=Y" alt="샘플2">
@@ -189,21 +188,20 @@
             </div>
             <div class="type-info-browse">
                 <h3>3장 타로 리딩</h3>
-                <div class="type-price-simple">₩20,000</div>
-                <div class="type-tags">
+                <div class="type-meta-row">
+                    <div class="type-price-simple">₩20,000~</div>
                     <span class="tag">3장</span>
-                    <span class="tag">리딩</span>
+                    <button class="btn-bookmark-browse">
+                        <svg class="icon-heart" viewBox="0 0 24 24">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                        </svg>
+                    </button>
                 </div>
-            </div>
-            <div class="type-footer">
-                <span class="type-status available">교환 가능</span>
-                <span class="type-author">달빛타로</span>
             </div>
         </div>
 
         <!-- 작곡 타입 -->
         <div class="type-card-browse" data-format="music">
-            <button class="btn-bookmark-browse">🤍</button>
             <div class="type-samples-browse">
                 <img src="https://via.placeholder.com/150/E0E0E0/999999?text=Music" alt="샘플1">
                 <img src="https://via.placeholder.com/150/E0E0E0/999999?text=Note" alt="샘플2">
@@ -211,21 +209,20 @@
             </div>
             <div class="type-info-browse">
                 <h3>감성 피아노 BGM</h3>
-                <div class="type-price-simple">₩60,000</div>
-                <div class="type-tags">
+                <div class="type-meta-row">
+                    <div class="type-price-simple">₩60,000~</div>
                     <span class="tag">피아노</span>
-                    <span class="tag">BGM</span>
+                    <button class="btn-bookmark-browse">
+                        <svg class="icon-heart" viewBox="0 0 24 24">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                        </svg>
+                    </button>
                 </div>
-            </div>
-            <div class="type-footer">
-                <span class="type-status available">교환 가능</span>
-                <span class="type-author">멜로디메이커</span>
             </div>
         </div>
 
         <!-- 굿즈 타입 -->
         <div class="type-card-browse" data-format="goods">
-            <button class="btn-bookmark-browse">🤍</button>
             <div class="type-samples-browse">
                 <img src="https://via.placeholder.com/150/E0E0E0/999999?text=G1" alt="샘플1">
                 <img src="https://via.placeholder.com/150/E0E0E0/999999?text=G2" alt="샘플2">
@@ -233,21 +230,20 @@
             </div>
             <div class="type-info-browse">
                 <h3>아크릴 키링 제작</h3>
-                <div class="type-price-simple">₩15,000</div>
-                <div class="type-tags">
+                <div class="type-meta-row">
+                    <div class="type-price-simple">₩15,000~</div>
                     <span class="tag">키링</span>
-                    <span class="tag">아크릴</span>
+                    <button class="btn-bookmark-browse">
+                        <svg class="icon-heart" viewBox="0 0 24 24">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                        </svg>
+                    </button>
                 </div>
-            </div>
-            <div class="type-footer">
-                <span class="type-status busy">진행중 (2주)</span>
-                <span class="type-author">굿즈공방</span>
             </div>
         </div>
 
         <!-- 글 타입 2 -->
         <div class="type-card-browse" data-format="writing">
-            <button class="btn-bookmark-browse">🤍</button>
             <div class="type-samples-browse">
                 <div class="text-sample-browse">
                     <p>"2157년, 화성 제3 거주지. 산소 공급이 중단된 지..."</p>
@@ -255,21 +251,20 @@
             </div>
             <div class="type-info-browse">
                 <h3>SF 중단편 소설</h3>
-                <div class="type-price-simple">₩30,000</div>
-                <div class="type-tags">
+                <div class="type-meta-row">
+                    <div class="type-price-simple">₩30,000~</div>
                     <span class="tag">SF</span>
-                    <span class="tag">중편</span>
+                    <button class="btn-bookmark-browse">
+                        <svg class="icon-heart" viewBox="0 0 24 24">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                        </svg>
+                    </button>
                 </div>
-            </div>
-            <div class="type-footer">
-                <span class="type-status available">교환 가능</span>
-                <span class="type-author">바람시인</span>
             </div>
         </div>
 
         <!-- 그림 타입 2 -->
         <div class="type-card-browse" data-format="art">
-            <button class="btn-bookmark-browse">🤍</button>
             <div class="type-samples-browse">
                 <img src="https://via.placeholder.com/150/E0E0E0/999999?text=SD1" alt="샘플1">
                 <img src="https://via.placeholder.com/150/E0E0E0/999999?text=SD2" alt="샘플2">
@@ -277,104 +272,15 @@
             </div>
             <div class="type-info-browse">
                 <h3>귀여운 SD 캐릭터</h3>
-                <div class="type-price-simple">₩20,000</div>
-                <div class="type-tags">
+                <div class="type-meta-row">
+                    <div class="type-price-simple">₩20,000~</div>
                     <span class="tag">SD</span>
-                    <span class="tag">귀여움</span>
+                    <button class="btn-bookmark-browse">
+                        <svg class="icon-heart" viewBox="0 0 24 24">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                        </svg>
+                    </button>
                 </div>
-            </div>
-            <div class="type-footer">
-                <span class="type-status available">교환 가능</span>
-                <span class="type-author">구름만화가</span>
-            </div>
-        </div>
-
-        <!-- 디자인 타입 2 -->
-        <div class="type-card-browse" data-format="design">
-            <button class="btn-bookmark-browse">🤍</button>
-            <div class="type-samples-browse">
-                <img src="https://via.placeholder.com/150/E0E0E0/999999?text=Card" alt="샘플1">
-                <img src="https://via.placeholder.com/150/E0E0E0/999999?text=Design" alt="샘플2">
-                <img src="https://via.placeholder.com/150/E0E0E0/999999?text=Print" alt="샘플3">
-            </div>
-            <div class="type-info-browse">
-                <h3>명함 디자인</h3>
-                <div class="type-price-simple">₩25,000</div>
-                <div class="type-tags">
-                    <span class="tag">명함</span>
-                    <span class="tag">인쇄</span>
-                </div>
-            </div>
-            <div class="type-footer">
-                <span class="type-status available">교환 가능</span>
-                <span class="type-author">파란펜촉</span>
-            </div>
-        </div>
-
-        <!-- 타로 타입 2 - 프리미엄 -->
-        <div class="type-card-browse premium" data-format="tarot">
-            <div class="premium-badge-small">★</div>
-            <button class="btn-bookmark-browse">🤍</button>
-            <div class="type-samples-browse">
-                <img src="https://via.placeholder.com/150/E0E0E0/999999?text=T1" alt="샘플1">
-                <img src="https://via.placeholder.com/150/E0E0E0/999999?text=T2" alt="샘플2">
-                <img src="https://via.placeholder.com/150/E0E0E0/999999?text=T3" alt="샘플3">
-            </div>
-            <div class="type-info-browse">
-                <h3>켈틱크로스 풀 리딩</h3>
-                <div class="type-price-simple">₩50,000</div>
-                <div class="type-tags">
-                    <span class="tag">10장</span>
-                    <span class="tag">심화</span>
-                </div>
-            </div>
-            <div class="type-footer">
-                <span class="type-status available">교환 가능</span>
-                <span class="type-author">별빛타로</span>
-            </div>
-        </div>
-
-        <!-- 작곡 타입 2 -->
-        <div class="type-card-browse" data-format="music">
-            <button class="btn-bookmark-browse">🤍</button>
-            <div class="type-samples-browse">
-                <img src="https://via.placeholder.com/150/E0E0E0/999999?text=Orch" alt="샘플1">
-                <img src="https://via.placeholder.com/150/E0E0E0/999999?text=Epic" alt="샘플2">
-                <img src="https://via.placeholder.com/150/E0E0E0/999999?text=OST" alt="샘플3">
-            </div>
-            <div class="type-info-browse">
-                <h3>판타지 오케스트라 BGM</h3>
-                <div class="type-price-simple">₩80,000</div>
-                <div class="type-tags">
-                    <span class="tag">오케스트라</span>
-                    <span class="tag">판타지</span>
-                </div>
-            </div>
-            <div class="type-footer">
-                <span class="type-status busy">진행중 (1개월)</span>
-                <span class="type-author">사운드크래프터</span>
-            </div>
-        </div>
-
-        <!-- 굿즈 타입 2 -->
-        <div class="type-card-browse" data-format="goods">
-            <button class="btn-bookmark-browse">🤍</button>
-            <div class="type-samples-browse">
-                <img src="https://via.placeholder.com/150/E0E0E0/999999?text=S1" alt="샘플1">
-                <img src="https://via.placeholder.com/150/E0E0E0/999999?text=S2" alt="샘플2">
-                <img src="https://via.placeholder.com/150/E0E0E0/999999?text=S3" alt="샘플3">
-            </div>
-            <div class="type-info-browse">
-                <h3>홀로그램 스티커 세트</h3>
-                <div class="type-price-simple">₩12,000</div>
-                <div class="type-tags">
-                    <span class="tag">스티커</span>
-                    <span class="tag">홀로그램</span>
-                </div>
-            </div>
-            <div class="type-footer">
-                <span class="type-status available">교환 가능</span>
-                <span class="type-author">반짝공방</span>
             </div>
         </div>
     </div>
