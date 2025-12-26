@@ -25,9 +25,12 @@
     </div>
 
     <div class="tabs">
-        <button class="tab active">내가 북마크한 작가 (12)</button>
-        <button class="tab">나를 북마크한 작가 (87)</button>
+        <button class="tab active" data-bookmark-tab="artists">작가 (12)</button>
+        <button class="tab" data-bookmark-tab="types">타입 (8)</button>
     </div>
+
+    <!-- 작가 탭 콘텐츠 -->
+    <div class="bookmark-tab-content active" id="artists-tab">
 
     <!-- 작가 프로필 그리드 -->
     <div class="artist-grid">
@@ -266,14 +269,108 @@
         </div>
 
     </div>
+
+    <!-- 타입 탭 콘텐츠 -->
+    <div class="bookmark-tab-content" id="types-tab">
+        <div class="type-grid-browse">
+            <!-- 북마크한 타입 1 -->
+            <div class="type-card-browse" data-format="writing">
+                <div class="type-samples-browse">
+                    <div class="text-sample-browse">
+                        <p>"그의 눈빛이 내게로 향했을 때..."</p>
+                    </div>
+                </div>
+                <div class="type-info-browse">
+                    <h3>감성 로맨스 소설</h3>
+                    <div class="type-meta-row">
+                        <div class="type-price-simple">₩25,000~</div>
+                        <span class="tag">로맨스</span>
+                        <button class="btn-bookmark-browse active">
+                            <svg class="icon-heart" viewBox="0 0 24 24">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 북마크한 타입 2 -->
+            <div class="type-card-browse premium" data-format="art">
+                <div class="premium-badge-small">★</div>
+                <div class="type-samples-browse">
+                    <img src="https://via.placeholder.com/150/E0E0E0/999999?text=1" alt="샘플1">
+                    <img src="https://via.placeholder.com/150/E0E0E0/999999?text=2" alt="샘플2">
+                    <img src="https://via.placeholder.com/150/E0E0E0/999999?text=3" alt="샘플3">
+                </div>
+                <div class="type-info-browse">
+                    <h3>판타지 캐릭터 일러스트</h3>
+                    <div class="type-meta-row">
+                        <div class="type-price-simple">₩45,000~</div>
+                        <span class="tag">판타지</span>
+                        <button class="btn-bookmark-browse active">
+                            <svg class="icon-heart" viewBox="0 0 24 24">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 북마크한 타입 3 -->
+            <div class="type-card-browse" data-format="design">
+                <div class="type-samples-browse">
+                    <img src="https://via.placeholder.com/150/E0E0E0/999999?text=A" alt="샘플1">
+                    <img src="https://via.placeholder.com/150/E0E0E0/999999?text=B" alt="샘플2">
+                    <img src="https://via.placeholder.com/150/E0E0E0/999999?text=C" alt="샘플3">
+                </div>
+                <div class="type-info-browse">
+                    <h3>미니멀 로고 디자인</h3>
+                    <div class="type-meta-row">
+                        <div class="type-price-simple">₩35,000~</div>
+                        <span class="tag">로고</span>
+                        <button class="btn-bookmark-browse active">
+                            <svg class="icon-heart" viewBox="0 0 24 24">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 북마크한 타입 4 -->
+            <div class="type-card-browse" data-format="music">
+                <div class="type-samples-browse">
+                    <img src="https://via.placeholder.com/150/E0E0E0/999999?text=M1" alt="샘플1">
+                    <img src="https://via.placeholder.com/150/E0E0E0/999999?text=M2" alt="샘플2">
+                    <img src="https://via.placeholder.com/150/E0E0E0/999999?text=M3" alt="샘플3">
+                </div>
+                <div class="type-info-browse">
+                    <h3>감성 피아노 BGM</h3>
+                    <div class="type-meta-row">
+                        <div class="type-price-simple">₩60,000~</div>
+                        <span class="tag">피아노</span>
+                        <button class="btn-bookmark-browse active">
+                            <svg class="icon-heart" viewBox="0 0 24 24">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 <script>
-// 북마크 탭 전환 기능
-document.querySelectorAll('#bookmarks-section .tab').forEach(tab => {
+// 북마크 탭 전환 (작가/타입)
+document.querySelectorAll('[data-bookmark-tab]').forEach(tab => {
     tab.addEventListener('click', function() {
-        document.querySelectorAll('#bookmarks-section .tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('[data-bookmark-tab]').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.bookmark-tab-content').forEach(c => c.classList.remove('active'));
+        
         this.classList.add('active');
+        const tabName = this.dataset.bookmarkTab;
+        document.getElementById(tabName + '-tab').classList.add('active');
     });
 });
 

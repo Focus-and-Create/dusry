@@ -210,4 +210,30 @@ document.querySelectorAll('.nav-link').forEach(link => {
 // 페이지 로드 시 첫 페이지 표시
 window.addEventListener('DOMContentLoaded', () => {
     loadPage('browse');
+    
+    // 사용자 메뉴 드롭다운
+    const userMenuBtn = document.getElementById('userMenuBtn');
+    const userDropdown = document.getElementById('userDropdown');
+    
+    if (userMenuBtn && userDropdown) {
+        userMenuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            userDropdown.classList.toggle('active');
+        });
+        
+        // 드롭다운 외부 클릭시 닫기
+        document.addEventListener('click', () => {
+            userDropdown.classList.remove('active');
+        });
+        
+        // 드롭다운 아이템 클릭시 페이지 이동
+        userDropdown.querySelectorAll('.dropdown-item[data-page]').forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                const page = item.dataset.page;
+                loadPage(page);
+                userDropdown.classList.remove('active');
+            });
+        });
+    }
 });

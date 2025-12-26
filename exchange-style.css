@@ -2553,3 +2553,563 @@ body {
     font-size: 11px;
     font-weight: 500;
 }
+
+/* ==================== 끌올 버튼 ==================== */
+.btn-boost {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition);
+    color: var(--color-text-muted);
+    border-radius: var(--radius-sm);
+}
+
+.btn-boost:hover {
+    background: var(--color-primary-pale);
+    color: var(--color-primary);
+    transform: translateY(-2px);
+}
+
+.btn-boost svg {
+    stroke: currentColor;
+}
+
+/* ==================== 사용자 드롭다운 ==================== */
+.user-menu-wrapper {
+    position: relative;
+}
+
+.user-menu {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-xs) var(--space-md);
+    background: var(--color-bg-hover);
+    border: 1px solid transparent;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all var(--transition);
+}
+
+.user-menu:hover {
+    background: var(--color-bg-main);
+    border-color: var(--color-border);
+}
+
+.icon-chevron {
+    stroke: var(--color-text-secondary);
+    transition: transform var(--transition);
+}
+
+.user-menu:hover .icon-chevron {
+    transform: translateY(2px);
+}
+
+.user-dropdown {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    background: white;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    min-width: 220px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all var(--transition);
+    z-index: 1000;
+}
+
+.user-dropdown.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-section {
+    padding: var(--space-sm);
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-md);
+    color: var(--color-text-primary);
+    text-decoration: none;
+    border-radius: var(--radius-md);
+    transition: all var(--transition);
+    font-size: var(--font-sm);
+}
+
+.dropdown-item:hover {
+    background: var(--color-bg-hover);
+}
+
+.dropdown-item svg {
+    stroke: var(--color-text-secondary);
+    fill: none;
+    stroke-width: 2;
+    flex-shrink: 0;
+}
+
+.dropdown-divider {
+    height: 1px;
+    background: var(--color-border-light);
+    margin: var(--space-xs) var(--space-md);
+}
+
+/* ==================== 북마크 탭 콘텐츠 ==================== */
+.bookmark-tab-content {
+    display: none;
+}
+
+.bookmark-tab-content.active {
+    display: block;
+}
+
+/* ==================== 작가 카드 가로 배치 개선 ==================== */
+.artist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: var(--space-lg);
+}
+
+.artist-card {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr auto;
+    gap: var(--space-md);
+    padding: var(--space-lg);
+    align-items: start;
+}
+
+.artist-card .match-badge,
+.artist-card .btn-bookmark-artist {
+    grid-column: 1 / -1;
+}
+
+.artist-card .match-badge {
+    justify-self: start;
+}
+
+.artist-card .btn-bookmark-artist {
+    position: absolute;
+    top: var(--space-sm);
+    right: var(--space-sm);
+}
+
+.artist-avatar {
+    grid-column: 1;
+    grid-row: 2;
+    width: 80px;
+    height: 80px;
+    margin: 0;
+}
+
+.artist-card-info {
+    grid-column: 2;
+    grid-row: 2;
+    text-align: left;
+}
+
+.artist-card .btn-primary {
+    grid-column: 1 / -1;
+    grid-row: 3;
+}
+
+.artist-card-info h3 {
+    text-align: left;
+    font-size: var(--font-lg);
+    margin-bottom: var(--space-xs);
+}
+
+.artist-bio {
+    margin-bottom: var(--space-sm);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.artist-samples-mini {
+    display: flex;
+    gap: var(--space-xs);
+    margin-bottom: var(--space-sm);
+}
+
+.artist-samples-mini img,
+.sample-text-mini {
+    width: 60px;
+    height: 50px;
+    flex-shrink: 0;
+}
+
+.artist-tags {
+    justify-content: flex-start;
+    margin-bottom: 0;
+}
+
+/* ==================== 설정 페이지 ==================== */
+.settings-card {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-2xl);
+    margin-bottom: var(--space-2xl);
+}
+
+.settings-card h3 {
+    font-family: var(--font-primary);
+    font-size: var(--font-xl);
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin-bottom: var(--space-lg);
+}
+
+.settings-grid {
+    display: grid;
+    gap: var(--space-lg);
+    margin-bottom: var(--space-xl);
+}
+
+.input-hint {
+    font-size: var(--font-xs);
+    color: var(--color-text-muted);
+    margin-top: var(--space-xs);
+}
+
+.settings-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+}
+
+.settings-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-lg);
+    padding: var(--space-lg);
+    background: var(--color-bg-main);
+    border-radius: var(--radius-md);
+}
+
+.settings-item h4 {
+    font-size: var(--font-base);
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin-bottom: 4px;
+}
+
+.settings-item p {
+    font-size: var(--font-sm);
+    color: var(--color-text-secondary);
+}
+
+/* 토글 스위치 */
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color-border);
+    transition: var(--transition);
+    border-radius: 24px;
+}
+
+.toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: var(--transition);
+    border-radius: 50%;
+}
+
+.toggle-switch input:checked + .toggle-slider {
+    background-color: var(--color-primary);
+}
+
+.toggle-switch input:checked + .toggle-slider:before {
+    transform: translateX(24px);
+}
+
+/* 위험 구역 */
+.danger-zone {
+    border-color: #ff6b6b;
+}
+
+.danger-zone h3 {
+    color: #ff6b6b;
+}
+
+.btn-danger {
+    background: #ff6b6b;
+    color: white;
+    border: none;
+}
+
+.btn-danger:hover {
+    background: #ff5252;
+}
+
+/* ==================== 결제 관리 ==================== */
+.premium-plan {
+    background: linear-gradient(135deg, var(--color-primary-pale) 0%, white 100%);
+    border-color: var(--color-primary);
+}
+
+.plan-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: var(--space-xl);
+}
+
+.plan-type {
+    font-size: var(--font-lg);
+    color: var(--color-primary);
+    font-weight: 600;
+    margin-top: var(--space-xs);
+}
+
+.plan-features {
+    display: grid;
+    gap: var(--space-md);
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    font-size: var(--font-base);
+    color: var(--color-text-primary);
+}
+
+.feature-item.disabled {
+    color: var(--color-text-muted);
+}
+
+.feature-icon {
+    stroke: var(--color-primary);
+    flex-shrink: 0;
+}
+
+.feature-item.disabled .feature-icon {
+    stroke: var(--color-text-muted);
+}
+
+/* 프리미엄 플랜 카드 */
+.premium-plans {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-lg);
+    margin-bottom: var(--space-2xl);
+}
+
+.plan-card {
+    background: var(--color-bg-card);
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-2xl);
+    position: relative;
+    transition: all var(--transition);
+}
+
+.plan-card:hover {
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-lg);
+}
+
+.plan-card.featured {
+    border-color: var(--color-primary);
+    background: linear-gradient(135deg, var(--color-primary-pale) 0%, white 100%);
+}
+
+.plan-badge {
+    position: absolute;
+    top: -12px;
+    right: var(--space-lg);
+    background: var(--color-primary);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: var(--font-xs);
+    font-weight: 600;
+}
+
+.plan-card h3 {
+    font-family: var(--font-primary);
+    font-size: var(--font-xl);
+    font-weight: 600;
+    margin-bottom: var(--space-md);
+}
+
+.plan-price {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-xs);
+    margin-bottom: var(--space-lg);
+}
+
+.price-amount {
+    font-family: var(--font-primary);
+    font-size: var(--font-3xl);
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.price-period {
+    font-size: var(--font-base);
+    color: var(--color-text-muted);
+}
+
+.price-save {
+    margin-left: auto;
+    background: #ff6b6b;
+    color: white;
+    padding: 4px 8px;
+    border-radius: var(--radius-sm);
+    font-size: var(--font-xs);
+    font-weight: 600;
+}
+
+.plan-benefits {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-xl);
+}
+
+.plan-benefits li {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-size: var(--font-sm);
+    color: var(--color-text-secondary);
+}
+
+.plan-benefits li:before {
+    content: "✓";
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+/* 결제 내역 */
+.payment-history {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.payment-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-lg);
+    padding: var(--space-lg);
+    background: var(--color-bg-main);
+    border-radius: var(--radius-md);
+}
+
+.payment-info {
+    flex: 1;
+}
+
+.payment-info h4 {
+    font-size: var(--font-base);
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin-bottom: 4px;
+}
+
+.payment-info p {
+    font-size: var(--font-sm);
+    color: var(--color-text-muted);
+}
+
+.payment-amount {
+    font-family: var(--font-primary);
+    font-size: var(--font-lg);
+    font-weight: 600;
+    color: var(--color-text-primary);
+}
+
+/* 결제 수단 */
+.payment-methods {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.payment-method-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-lg);
+    background: var(--color-bg-main);
+    border-radius: var(--radius-md);
+}
+
+.payment-method-info {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.payment-method-info svg {
+    stroke: var(--color-text-secondary);
+    fill: none;
+}
+
+.payment-method-info h4 {
+    font-size: var(--font-base);
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin-bottom: 4px;
+}
+
+.payment-method-info p {
+    font-size: var(--font-sm);
+    color: var(--color-text-muted);
+}
+
+.payment-method-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.badge-primary {
+    background: var(--color-primary-pale);
+    color: var(--color-primary);
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: var(--font-xs);
+    font-weight: 600;
+}

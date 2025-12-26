@@ -1,0 +1,112 @@
+<section id="settings-section">
+    <h2 class="section-heading">계정 설정</h2>
+
+    <!-- 기본 정보 -->
+    <div class="settings-card">
+        <h3>기본 정보</h3>
+        <div class="settings-grid">
+            <div class="form-group">
+                <label>이메일</label>
+                <input type="email" class="form-input" value="eojin@example.com" readonly>
+                <p class="input-hint">이메일은 변경할 수 없습니다</p>
+            </div>
+            <div class="form-group">
+                <label>닉네임</label>
+                <input type="text" class="form-input" value="어진" placeholder="닉네임을 입력하세요">
+            </div>
+            <div class="form-group">
+                <label>자기소개</label>
+                <textarea class="form-textarea" placeholder="작가님을 소개해주세요">치비 스타일 전문 디지털 아티스트</textarea>
+            </div>
+        </div>
+        <button class="btn btn-primary">변경사항 저장</button>
+    </div>
+
+    <!-- 비밀번호 변경 -->
+    <div class="settings-card">
+        <h3>비밀번호 변경</h3>
+        <div class="settings-grid">
+            <div class="form-group">
+                <label>현재 비밀번호</label>
+                <input type="password" class="form-input" placeholder="현재 비밀번호">
+            </div>
+            <div class="form-group">
+                <label>새 비밀번호</label>
+                <input type="password" class="form-input" placeholder="새 비밀번호 (8자 이상)">
+            </div>
+            <div class="form-group">
+                <label>새 비밀번호 확인</label>
+                <input type="password" class="form-input" placeholder="새 비밀번호 확인">
+            </div>
+        </div>
+        <button class="btn btn-primary">비밀번호 변경</button>
+    </div>
+
+    <!-- 알림 설정 -->
+    <div class="settings-card">
+        <h3>알림 설정</h3>
+        <div class="settings-list">
+            <div class="settings-item">
+                <div>
+                    <h4>교환 신청 알림</h4>
+                    <p>새로운 교환 신청이 있을 때 알림을 받습니다</p>
+                </div>
+                <label class="toggle-switch">
+                    <input type="checkbox" checked>
+                    <span class="toggle-slider"></span>
+                </label>
+            </div>
+            <div class="settings-item">
+                <div>
+                    <h4>메시지 알림</h4>
+                    <p>새 메시지를 받았을 때 알림을 받습니다</p>
+                </div>
+                <label class="toggle-switch">
+                    <input type="checkbox" checked>
+                    <span class="toggle-slider"></span>
+                </label>
+            </div>
+            <div class="settings-item">
+                <div>
+                    <h4>북마크 알림</h4>
+                    <p>내가 북마크한 작가의 새 타입 등록 알림</p>
+                </div>
+                <label class="toggle-switch">
+                    <input type="checkbox">
+                    <span class="toggle-slider"></span>
+                </label>
+            </div>
+            <div class="settings-item">
+                <div>
+                    <h4>마케팅 알림</h4>
+                    <p>이벤트 및 프로모션 소식을 받습니다</p>
+                </div>
+                <label class="toggle-switch">
+                    <input type="checkbox">
+                    <span class="toggle-slider"></span>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <!-- 계정 관리 -->
+    <div class="settings-card danger-zone">
+        <h3>계정 관리</h3>
+        <div class="settings-list">
+            <div class="settings-item">
+                <div>
+                    <h4>계정 일시 정지</h4>
+                    <p>일정 기간 동안 계정을 비활성화합니다</p>
+                </div>
+                <button class="btn btn-white">일시 정지</button>
+            </div>
+            <div class="settings-item">
+                <div>
+                    <h4>계정 삭제</h4>
+                    <p>모든 데이터가 영구적으로 삭제됩니다</p>
+                </div>
+                <button class="btn btn-danger">계정 삭제</button>
+            </div>
+        </div>
+    </div>
+</section>
